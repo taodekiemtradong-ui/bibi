@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@media print {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 13pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    page-break-inside: auto !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  .page-break-before {
+    page-break-before: always !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 20mm 15mm 20mm 20mm;
+  }
+}
